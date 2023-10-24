@@ -29,7 +29,7 @@ const { createApp } = Vue
 createApp({
     data () {
         return {
-            currentIndex: 0,
+            currentIndex: 2,
             slides: [
                 {
                     image: "./img/01.webp",
