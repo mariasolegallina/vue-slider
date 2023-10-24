@@ -59,15 +59,15 @@ createApp({
     methods: {
         prevSlide() {
             this.currentIndex--;
-            // if (this.currentIndex = 0) {
-            //     this.currentIndex = this.slides.length
-            // }
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.slides.length - 1;
+            }
         },
         nextSlide() {
             this.currentIndex++;
-            // if (this.currentIndex = this.slides.length) {
-            //     this.currentIndex = 0
-            // }
+            if (this.currentIndex > this.slides.length - 1) {
+                this.currentIndex = 0;
+            }
         }
     },
 }).mount ('#app')
